@@ -1,5 +1,5 @@
 # TweetBook
-*Présentation*
+#Présentation
 Le responsable de votre entreprise souhaite créer son propre réseau social (concurrent des Google+, Facebook, Twitter,
 LinkedIn, Tumblr) pour aider à la communication entre ses clients et ses employés. Pour cela il vous demande d’écrire
 une nouvelle application WEB tweetBook permettant à chacun de diffuser des messages à ses amis à travers la notion
@@ -9,9 +9,11 @@ chacun soit de se connecter via un formulaire d’identification soit d’accéd
 ce nouvel utilisateur ses informations personnelles (nom, prénom, date de naissance, email) ainsi que le login/mdp qu’il
 souhaite utiliser.
 Une fois identifié sur le site, chaque utilisateur a accès à 4 pages :
-*Mur* qui permet de poster de nouveaux messages et d’afficher toutes les autres actualités que l’on a généré du plus récent
+<br>
+#Mur qui permet de poster de nouveaux messages et d’afficher toutes les autres actualités que l’on a généré du plus récent
 au plus ancien. Le propriétaire est le seul à pouvoir écrire sur son mur. Il y a deux types d’actualités : les messages
 et les informations sur les nouveaux amis.
+<br>
 *Amis* qui permet d’afficher ses amis mais aussi d’en rechercher et ajouter de nouveaux. Le lien amis est symétrique, si
 on est ami avec quelqu’un la réciproque est vraie aussi, il n’y a pas d’acceptation necessaire. Cette information est
 diffusée comme nouvelle actualité sur son mur, sur son Fil d’actualité, ainsi que sur le Fil de ses amis.
@@ -42,7 +44,7 @@ base que le reste du système (authentification sous Postgres, reste sous SQLite
 – Dans une quatrième étape, ajouter à la page de login un bouton “J’ai oublié mon mot de passe” qui renvoie le mot de
 passe par email au login correspondant.
 – Dans une cinquième étape, le système permettra d’autres types de messages : url et photo
-
+<br>
 *Travail à faire*
 1. Le travail peut être réalisé en binôme, mais les responsabilités doivent être établies. A la fin, une feuille des tâches
 avec son responsable doit être impérativement rendue.
@@ -71,6 +73,7 @@ iv. Conclusion
 (d) La documentation utilisateur (tutorial)
 i. Objectif de cette application
 ii. Du point de vue de l’utilisateur
+<br>
 *Contrôle du travail*
 Vous pouvez utiliser toutes les technologies que vous souhaitez (Servlet, JSP, PHP, ASP, .NET, CGI, Zope, Rails, Perl,
 WinDeV, ...) néanmoins le projet doit tourner en salle TP et vous devez pouvoir en faire une démonstration. L’attention
