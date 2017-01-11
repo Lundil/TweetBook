@@ -7,6 +7,8 @@ import javax.servlet.http.*;
 public class ControlUser extends HttpServlet{
 	public void service( HttpServletRequest request, HttpServletResponse response){
 		try{
+			
+
 			ModelUser list = new ModelUser();
 			list.initialize();
 			String login = request.getAttribute("login");

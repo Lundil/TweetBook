@@ -13,10 +13,10 @@ public class ModelUser{
 
 	public void initialize(){
 		try{
-
-			Class.forName ("org.postgresql.Driver").newInstance();
-			String url = "jdbc:postgresql://psqlserv/da2i";
-			connection = DriverManager.getConnection (url, "catricea", "moi");
+			Context initCtx = new InitialContext();
+			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+			DataSource ds = (DataSource) envCtx.lookup("monPool");
+			connection = ds.getConnection();
 
 		} catch (Exception e){
 			e.printStackTrace();
