@@ -10,11 +10,11 @@ ce nouvel utilisateur ses informations personnelles (nom, prénom, date de naiss
 souhaite utiliser.
 Une fois identifié sur le site, chaque utilisateur a accès à 4 pages :
 <br>
-#Mur qui permet de poster de nouveaux messages et d’afficher toutes les autres actualités que l’on a généré du plus récent
+**Mur** qui permet de poster de nouveaux messages et d’afficher toutes les autres actualités que l’on a généré du plus récent
 au plus ancien. Le propriétaire est le seul à pouvoir écrire sur son mur. Il y a deux types d’actualités : les messages
 et les informations sur les nouveaux amis.
 <br>
-*Amis* qui permet d’afficher ses amis mais aussi d’en rechercher et ajouter de nouveaux. Le lien amis est symétrique, si
+**Amis** qui permet d’afficher ses amis mais aussi d’en rechercher et ajouter de nouveaux. Le lien amis est symétrique, si
 on est ami avec quelqu’un la réciproque est vraie aussi, il n’y a pas d’acceptation necessaire. Cette information est
 diffusée comme nouvelle actualité sur son mur, sur son Fil d’actualité, ainsi que sur le Fil de ses amis.
 *Fil d’actualités* qui permet d’afficher les actualités générées par ses amis (depuis qu’on est amis) ou par soi même, de la
@@ -45,7 +45,7 @@ base que le reste du système (authentification sous Postgres, reste sous SQLite
 passe par email au login correspondant.
 – Dans une cinquième étape, le système permettra d’autres types de messages : url et photo
 <br>
-*Travail à faire*
+#Travail à faire
 1. Le travail peut être réalisé en binôme, mais les responsabilités doivent être établies. A la fin, une feuille des tâches
 avec son responsable doit être impérativement rendue.
 2. Etablir le MCD et la base permettant de gérer cette application. C’est le coeur du problème ! Comment stocker
@@ -74,7 +74,7 @@ iv. Conclusion
 i. Objectif de cette application
 ii. Du point de vue de l’utilisateur
 <br>
-*Contrôle du travail*
+#Contrôle du travail
 Vous pouvez utiliser toutes les technologies que vous souhaitez (Servlet, JSP, PHP, ASP, .NET, CGI, Zope, Rails, Perl,
 WinDeV, ...) néanmoins le projet doit tourner en salle TP et vous devez pouvoir en faire une démonstration. L’attention
 sera particulièrement portée sur les technologies que vous mettrez en oeuvre pour réaliser ce site, notamment :
