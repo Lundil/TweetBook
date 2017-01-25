@@ -10,6 +10,7 @@
    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
    <link href="css/own.css" rel="stylesheet">
+   <link rel="icon" href="http://moodle.univ-lille1.fr/theme/image.php/ulille/theme/1484841149/favicon" />
    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Tweetbook</h3>
+            <h3 class="masthead-brand"><a href="index.html">TweetBook</a></h3>
             <nav>
               <ul class="nav masthead-nav">
                 <li><a href="signin.jsp">Inscription</a></li>
