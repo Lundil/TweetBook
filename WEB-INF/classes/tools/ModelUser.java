@@ -2,6 +2,8 @@ package tools;
 import java.util.ArrayList;
 import javax.servlet.*;
 import java.sql.*;
+import javax.naming.*;
+import javax.sql.*;
 import javax.servlet.http.*;
 
 /** manipulation de l'objet utilisateur dans la base de données */
@@ -27,7 +29,7 @@ public class ModelUser{
 
 	public void execute(String login, String password){
 		try{
-			statement = c.prepareStatement("select lastName, firstName from user where (login=? and password=?) or (mail=? and password=?");
+			statement = connection.prepareStatement("select lastName, firstName from user where (login=? and password=?) or (mail=? and password=?");
 			statement.setString(1,login);
 			statement.setString(2,password);
 			statement.setString(3,login);
@@ -56,7 +58,7 @@ public class ModelUser{
 
 	public void create(String firstName, String lastName, String mail, String phoneNumber, String date, String place, String address, String login, String password){
 		try{
-			statement = c.prepareStatement("insert into user(lastName, firstName, email, phoneNumber, birthDay, birthPlace, login, password) values(?,?,?,?,?,?,?,?,?)");
+			statement = connection.prepareStatement("insert into user(lastName, firstName, email, phoneNumber, birthDay, birthPlace, login, password) values(?,?,?,?,?,?,?,?,?)");
 			statement.setString(1,lastName);
 			statement.setString(2,firstName);
 			statement.setString(3,mail);

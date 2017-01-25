@@ -22,22 +22,22 @@ public class SessionTrack implements HttpSessionListener{
     }
 
     public void sessionCreated(HttpSessionEvent event){
-		this.nb ++;
-		this.liste.add(event.getSession());
+		nb ++;
+		liste.add(event.getSession());
     }
 
     public void sessionDestroyed(HttpSessionEvent event){
-		this.nb --;
-		this.liste.remove(event.getSession());
+		nb --;
+		liste.remove(event.getSession());
     }
 
     public static int getSessionNumber(){
-    	return this.nb;
+    	return nb;
     }
 
     public static String getSessionList(){
 		String result = "";
-		Iterator it = this.liste.iterator();
+		Iterator it = liste.iterator();
 
 		while (it.hasNext()){
 			HttpSession s = (HttpSession)(it.next());
