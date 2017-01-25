@@ -6,11 +6,7 @@ public class User{
 	//informations persomnelles de l'utilisateur;
 	private String lastName, firstName, mail, phoneNumber, date, place, address, login;
 	//ID des groupes et des évènements auquels participe l'utilisateur
-<<<<<<< HEAD
-	private ArrayList<int> listGroup, listEvent;
-=======
 	private ArrayList<Integer> listGroup, listEvent;
->>>>>>> 4a53437f3520cd1e6308c307c93452e012d30a3f
 
 	public User(String login){
 		this.login = login;

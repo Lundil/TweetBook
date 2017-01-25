@@ -30,7 +30,7 @@
         </div>
         <div class="inner cover">
         <p class="lead">
-            <form class="form-signin">
+            <form class="form-signin" method="POST">
             <h1 class="form-signin-heading">Connectez-vous</h1>
             <input type="text" id="inputLogin" class="form-control" placeholder="Login" required autofocus></p>
             <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required></p>
