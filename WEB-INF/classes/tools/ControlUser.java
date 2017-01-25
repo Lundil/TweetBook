@@ -11,19 +11,16 @@ public class ControlUser extends HttpServlet{
 
 			ModelUser list = new ModelUser();
 			list.initialize();
-			String login = request.getAttribute("login");
-			String password = request.getAttribute("password");
+			String login = (String) request.getAttribute("login");
+			String password = (String) request.getAttribute("password");
 			if(request.getAttribute("new") == null)
 				list.execute(login, password);
 			else{
-				String firstName = request.getAttribute("firstName");
-				Stirng lastName = request.getAttribute("lastName");
-				String phoneNumber = request.getAttribute("phoneNumber");
-				Stirng date = request.getAttribute("date");
-				String place = request.getAttribute("place");
-				Stirng address = request.getAttribute("address");
-				Stirng mail = request.getAttribute("mail");
-				list.create(firstName, lastName, mail, phoneNumber, date, place, address, login, password);
+				list.create((String) request.getAttribute("firstName"), (String) request.getAttribute("lastName"),
+				(String) request.getAttribute("mail"), (String) request.getAttribute("phoneNumber"),
+				(String) request.getAttribute("date"), (String) request.getAttribute("place"),
+				(String) request.getAttribute("address"), (String) request.getAttribute("login"),
+				(String) request.getAttribute("password"));
 			}
 			request.setAttribute("list", list);
 			ServletContext servletContext = getServletContext();

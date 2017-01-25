@@ -1,7 +1,7 @@
 <Context path="/TweetBook" docBase="TweetBook" debug="99">
 
   <!-- Definition du pool -->
-<Resource name="mabase" auth="Container" type="javax.sql.DataSource"
+<Resource name="database" auth="Container" type="javax.sql.DataSource"
   maxActive="3" maxIdle="1" maxWait="10000"
   username="catricea" password="moi" driverClassName="org.postgresql.Driver"
   url="jdbc:postgresql://psqlserv/da2i" />

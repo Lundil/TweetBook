@@ -1,5 +1,7 @@
 package tools;
+import java.util.ArrayList;
 import javax.servlet.*;
+import java.sql.*;
 import javax.servlet.http.*;
 
 /** manipulation de l'objet utilisateur dans la base de données */
@@ -15,7 +17,7 @@ public class ModelUser{
 		try{
 			Context initCtx = new InitialContext();
 			Context envCtx = (Context) initCtx.lookup("java:comp/env");
-			DataSource ds = (DataSource) envCtx.lookup("monPool");
+			DataSource ds = (DataSource) envCtx.lookup("database");
 			connection = ds.getConnection();
 
 		} catch (Exception e){

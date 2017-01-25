@@ -46,10 +46,10 @@ public class User{
 	public String getPlace(){
 		return this.place;
 	}
-	public Stirng getAddress(){
+	public String getAddress(){
 		return this.address;
 	}
-	public Stirng getLogin(){
+	public String getLogin(){
 		return this.login;
 	}
 }
