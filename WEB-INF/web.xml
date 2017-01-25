@@ -60,7 +60,7 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>signup.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
 

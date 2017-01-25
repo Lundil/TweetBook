@@ -30,7 +30,7 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Tweetbook</h3>
+            <h3 class="masthead-brand"><a href="index.html">TweetBook</a></h3>
             <nav>
               <ul class="nav masthead-nav">
                 <li><a href="signin.jsp">Inscription</a></li>
@@ -50,9 +50,9 @@
             <input type="text" name ="place" id="inputLieuNaiss" class="form-control" placeholder="Lieu de naissance" required autofocus></p>
             <input type="text" name ="address" id="inputAdress" class="form-control" placeholder="Adresse" required autofocus></p>
             <input type="text" name ="phoneNumber" id="inputPhone" class="form-control" placeholder="Telephone" required autofocus></p>
-            <input type="text" name ="login" id="inputLogin" class="form-control" placeholder="Login" required autofocus></p>
+            <input type="text" name ="inputLogin" id="inputLogin" class="form-control" placeholder="Login" required autofocus></p>
             <input type="email" name ="mail" id="inputMail" class="form-control" placeholder="Mail" required autofocus></p>
-            <input type="password" name ="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus></p>
+            <input type="password" name ="inputPassword" id="inputPassword" class="form-control" placeholder="Mot de passe" required autofocus></p>
             <input type="hidden" value=true name="new"></input>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Confirmer</button>
          </form>

@@ -18,7 +18,7 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Tweetbook</h3>
+            <h3 class="masthead-brand"><a href="index.html">TweetBook</a></h3>
             <nav>
               <ul class="nav masthead-nav">
                 <li><a href="signin.jsp">Inscription</a></li>
