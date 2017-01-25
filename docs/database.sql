@@ -1,5 +1,15 @@
+drop table if exists belongToGroup;
+drop table if exists participateToEvent;
+drop table if exists friendWith;
+drop table if exists Publications;
+drop table if exists Events;
+drop table if exists Groups;
+drop table if exists Roles;
+drop table if exists Users;
+
+
 -- création de la table utilisateur avec un ID, une adresse mail et un login uniques; un nom, un prénom et un mot de passe obligatoires
-create table user(
+create table Users(
 	IDUser serial primary key,
 	lastName varchar(50) not null,
 	firstName varchar(50) not null,
@@ -14,74 +24,68 @@ create table user(
 );
 
 -- création de la table publication avec un ID, un titre obligatoire et un le nombre de like à 0
-create table publication(
+create table Publications(
 	IDPublication serial primary key,
 	titlePublication varchar(20) not null,
 	content varchar(200),
 	likesNumber integer default 0,
-	IDAuthor integer references user(IDUser)
+	IDAuthor integer references Users(IDUser)
 		on update cascade
 		on delete restrict
 );
 
 -- création de la table évènement avec un ID et un titre obligatoire
-create table event(
+create table Events(
 	IDEvent serial primary key,
 	titleEvent varchar(20) not null,
 	description varchar(200),
 	place varchar(200),
 	date date,
-	IDCreator integer references user(IDUser)
+	IDCreator integer references Users(IDUser)
 		on update cascade
 		on delete restrict
 );
 
 -- création de la table groupe avec un ID et un titre obligatoire
-create table group(
+create table Groups(
 	IDGroup serial primary key,
 	titleGroup varchar(20) not null,
-	IDCreator integer references user(IDUser)
+	IDCreator integer references Users(IDUser)
 		on update cascade
 		on delete restrict
 );
 
 -- création de la table d'appartenance à un groupe pour un utilisateur avec l'ID du groupe et de l'utilisateur
 create table belongToGroup(
-	IDGroup integer references group(IDGroup)
+	IDGroup integer references Groups(IDGroup)
 		on update cascade
 		on delete restrict,
-	IDUser integer references user(IDUser)
+	IDUser integer references Users(IDUser)
 		on update cascade
 		on delete restrict,
 	constraint PKBelongToGroup primary key (IDGroup, IDUser)
-		on update cascade
-		on delete restrict
 );
 
 -- création de la table de participation à un évènement pour un utilisateur avec l'ID de l'évènement et de l'utilisateur
 create table participateToEvent(
-	IDEvent integer references event(IDEvent)
+	IDEvent integer references Events(IDEvent)
 		on update cascade
 		on delete restrict,
-	IDUser integer references user(IDUser)
+	IDUser integer references Users(IDUser)
 		on update cascade
 		on delete restrict,
 	constraint PKParticipateToEvent primary key (IDEvent, IDUser)
-		on update cascade
-		on delete restrict
 );
 
 -- création de la table de relation entre deux utilisateurs avec leurs IDs
 create table friendWith(
-	IDUser1 integer references user(IDUser)
+	IDUser1 integer references Users(IDUser)
 		on update cascade
 		on delete restrict,
-	IDUser2 integer references user(IDUser)
+	IDUser2 integer references Users(IDUser)
 		on update cascade
 		on delete restrict,
 	constraint PKFriendWith primary key (IDUser1, IDUser2)
-		on update cascade
-		on delete restrict
 );
 
 -- création de la table des rôles : 
@@ -89,9 +93,9 @@ create table friendWith(
 -- 2 : user
 -- 3 : useless
 
-create table role(
-	IDUser integer references user(IDUser)
+create table Roles(
+	IDUser integer references Users(IDUser)
 		on update cascade
 		on delete restrict,
-	role integer not null
+	role varchar(6) default 'role1'
 );

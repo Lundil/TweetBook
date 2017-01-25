@@ -68,7 +68,8 @@
     <security-constraint>
      <web-resource-collection>
        <web-resource-name>Administrateur</web-resource-name>
-         <url-pattern>/page2.html</url-pattern>
+         <url-pattern>/signup.jsp</url-pattern>
+         <url-pattern>/signin.jsp</url-pattern>
      </web-resource-collection>
       <auth-constraint>
          <role-name>role1</role-name>
@@ -101,7 +102,7 @@
     <!-- La maniere dont la page de login est affichee -->
     <login-config>
       <auth-method>BASIC</auth-method>
-      <realm-name>Nom affiché sur le formulaire</realm-name>
+      <realm-name>inputPassword</realm-name>
     </login-config>
 
     <!-- La liste des differents roles -->
