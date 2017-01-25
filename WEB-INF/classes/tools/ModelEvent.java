@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 
 /** manipulation de l'objet utilisateur dans la base de données */
 
-public class ModelUser{
+public class ModelEvent{
 
 	protected ArrayList<User> list = new ArrayList<User>();
 	protected ResultSet result;

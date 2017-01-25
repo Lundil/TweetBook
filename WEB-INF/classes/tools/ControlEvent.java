@@ -4,20 +4,19 @@ import javax.servlet.http.*;
 
 /**	servlet gérant l'authentification ou l'inscription d'un utilisateur */
 
-public class ControlUser extends HttpServlet{
+public class ControlEvent extends HttpServlet{
 	public void service( HttpServletRequest request, HttpServletResponse response){
 		try{
 			
 
-			Model list = new Model();
+			ModelEvent list = new ModelEvent();
 			list.initialize();
 			String login = (String) request.getAttribute("login");
 			String password = (String) request.getAttribute("password");
 			if(request.getAttribute("new") == null)
 				list.execute(login, password);
 			else{
-				list.createUser(
-				(String) request.getAttribute("firstName"), (String) request.getAttribute("lastName"),
+				list.create((String) request.getAttribute("firstName"), (String) request.getAttribute("lastName"),
 				(String) request.getAttribute("mail"), (String) request.getAttribute("phoneNumber"),
 				(String) request.getAttribute("date"), (String) request.getAttribute("place"),
 				(String) request.getAttribute("address"), (String) request.getAttribute("login"),

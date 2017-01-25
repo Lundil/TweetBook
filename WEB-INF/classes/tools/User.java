@@ -1,8 +1,12 @@
 package tools;
+import java.util.ArrayList;
 
 public class User{
 
+	//informations persomnelles de l'utilisateur;
 	private String lastName, firstName, mail, phoneNumber, date, place, address, login;
+	//ID des groupes et des évènements auquels participe l'utilisateur
+	private ArrayList<Integer> listGroup, listEvent;
 
 	public User(String login){
 		this.login = login;
