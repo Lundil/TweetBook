@@ -8,14 +8,11 @@
   
 <!-- Definition du Realm via le pool -->
 
-<Realm  className="org.apache.catalina.realm.DataSourceRealm" debug="99"
-        dataSourceName="mabase" localDataSource="true"
-        userTable="User" userNameCol="login" userCredCol="password"
-        userRoleTable="role" roleNameCol="role" >
-       <CredentialHandler 
-        className="org.apache.catalina.realm.MessageDigestCredentialHandler" 
-        algorithm="md5" /> 
-</Realm>
+<Realm className="org.apache.catalina.realm.DataSourceRealm" debug="99"
+       digest="md5"
+       dataSourceName="database" localDataSource="true"
+       userTable="Users" userNameCol="login" userCredCol="password"
+       userRoleTable="Roles" roleNameCol="role"  />
 
 <!-- Definition d'une valve d'acces -->
 <Valve className="org.apache.catalina.valves.AccessLogValve"

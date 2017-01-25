@@ -68,29 +68,7 @@
     <security-constraint>
      <web-resource-collection>
        <web-resource-name>Administrateur</web-resource-name>
-         <url-pattern>/signup.jsp</url-pattern>
-         <url-pattern>/signin.jsp</url-pattern>
-     </web-resource-collection>
-      <auth-constraint>
-         <role-name>role1</role-name>
-      </auth-constraint>
-    </security-constraint>
-
-    <security-constraint>
-     <web-resource-collection>
-       <web-resource-name>Administrateur</web-resource-name>
-         <url-pattern>/page3.html</url-pattern>
-     </web-resource-collection>
-      <auth-constraint>
-         <role-name>role2</role-name>
-      </auth-constraint>
-    </security-constraint>
-
-    <security-constraint>
-     <web-resource-collection>
-       <web-resource-name>Administrateur</web-resource-name>
-         <url-pattern>/page4.jsp</url-pattern>
-         <url-pattern>/page5.jsp</url-pattern>
+         <url-pattern>/profil.jsp</url-pattern>
      </web-resource-collection>
       <auth-constraint>
          <role-name>role1</role-name>
@@ -101,9 +79,12 @@
 
     <!-- La maniere dont la page de login est affichee -->
     <login-config>
-      <auth-method>BASIC</auth-method>
-      <realm-name>inputPassword</realm-name>
+      <auth-method>FORM</auth-method>
+      <form-login-config>
+        <form-login-page>signup.jsp</form-login-page>
+      </form-login-config>
     </login-config>
+    
 
     <!-- La liste des differents roles -->
     <security-role>
