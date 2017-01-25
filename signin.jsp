@@ -11,6 +11,7 @@
    <link href="css/own.css" rel="stylesheet">
    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
    <title>Tweetbook - Sign up</title>
+   <link rel="icon" href="http://moodle.univ-lille1.fr/theme/image.php/ulille/theme/1484841149/favicon" />
    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
    <script>
       $(document).ready(function() {
