@@ -1,9 +1,11 @@
 import tools.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
 
 /**	servlet gérant l'authentification ou l'inscription d'un utilisateur */
 
+@WebServlet("/servlet/ControlEvent")
 public class ControlEvent extends HttpServlet{
 	public void service( HttpServletRequest request, HttpServletResponse response){
 		try{

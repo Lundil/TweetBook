@@ -20,11 +20,6 @@
         <load-on-startup>2</load-on-startup>
     </servlet>
 
-   <servlet-mapping>
-        <servlet-name>invoker</servlet-name>
-        <url-pattern>/servlet/*</url-pattern>
-    </servlet-mapping>
-
 <listener>
     <listener-class>tools.SessionTrack</listener-class>
 </listener>
