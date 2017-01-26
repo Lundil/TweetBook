@@ -1,4 +1,4 @@
-package tools;
+import tools.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -8,24 +8,14 @@ public class ControlEvent extends HttpServlet{
 	public void service( HttpServletRequest request, HttpServletResponse response){
 		try{
 			
-
-			ModelEvent list = new ModelEvent();
+			Model list = new Model();
 			list.initialize();
-			String login = (String) request.getAttribute("login");
-			String password = (String) request.getAttribute("password");
-			if(request.getAttribute("new") == null)
-				list.execute(login, password);
-			else{
-				list.create((String) request.getAttribute("firstName"), (String) request.getAttribute("lastName"),
-				(String) request.getAttribute("mail"), (String) request.getAttribute("phoneNumber"),
-				(String) request.getAttribute("date"), (String) request.getAttribute("place"),
-				(String) request.getAttribute("address"), (String) request.getAttribute("login"),
-				(String) request.getAttribute("password"));
-			}
+
+			list.createEvent((String) request.getAttribute("title"), (String) request.getAttribute("description"),
+			(String) request.getAttribute("place"), (String) request.getAttribute("date"),
+			(String) request.getAttribute("login"));
+
 			request.setAttribute("list", list);
-			ServletContext servletContext = getServletContext();
-			RequestDispatcher dispatcher = servletContext.getRequestDispatcher("/welcome.jsp");
-			dispatcher.forward(request, response);
 		} catch (Exception e){
 			e.printStackTrace();
 		}

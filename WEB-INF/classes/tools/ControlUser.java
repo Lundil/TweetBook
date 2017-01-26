@@ -1,11 +1,11 @@
-package tools;
+import tools.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
 /**	servlet gérant l'authentification ou l'inscription d'un utilisateur */
 
-@WebServlet("/tools/ControlUser")
+@WebServlet("/servlet/ControlUser")
 public class ControlUser extends HttpServlet{
 	public void service( HttpServletRequest request, HttpServletResponse response){
 		try{
@@ -13,6 +13,7 @@ public class ControlUser extends HttpServlet{
 
 			Model list = new Model();
 			list.initialize();
+			System.out.println("initialize");
 			String login = (String) request.getAttribute("login");
 			String password = (String) request.getAttribute("password");
 			if(request.getAttribute("new") == null)
@@ -26,9 +27,10 @@ public class ControlUser extends HttpServlet{
 				(String) request.getAttribute("inputPassword"));
 			}
 			request.setAttribute("list", list);
+			System.out.println("executed");
 			ServletContext servletContext = getServletContext();
-			RequestDispatcher dispatcher = servletContext.getRequestDispatcher("/index.html");
-			dispatcher.forward(request, response);
+			//RequestDispatcher dispatcher = servletContext.getRequestDispatcher("/index.html");
+			//dispatcher.forward(request, response);
 		} catch (Exception e){
 			e.printStackTrace();
 		}

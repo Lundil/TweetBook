@@ -34,8 +34,8 @@
             <h3 class="masthead-brand"><a href="index.html">TweetBook</a></h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li><a href="signin.jsp">Inscription</a></li>
-                <li><a href="signup.jsp">Connexion</a></li>
+                <li><a href="signin.html">Inscription</a></li>
+                <li><a href="profil.jsp">Connexion</a></li>
               </ul>
             </nav>
           </div>
@@ -43,7 +43,7 @@
         <div id="hintbox"></div>
         <div class="inner cover">
         <p class="lead">
-         <form class="form-signin">
+         <form class="form-signin" action="/servlet/ControlUser" method="post">
             <h1 class="form-signin-heading">Inscrivez-vous</h1>
             <input type="text" name ="lastName" id="lastName" class="form-control" placeholder="Nom" required autofocus></p>
             <input type="text" name ="firstName" id="firstName" class="form-control" placeholder="Prenom" required></p>

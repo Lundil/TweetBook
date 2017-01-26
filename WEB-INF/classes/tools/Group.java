@@ -1,18 +1,15 @@
 package tools;
 import java.util.ArrayList;
 
-public class Event{
+public class Group{
 
 	//informations sur l'évènement
-	private String title, description, place, date, creator;
+	private String title, creator;
 	//login des participants (utilisateurs)
 	private ArrayList<String> listUsers;
 
-	public Event(String title, String description, String place, String date, String creator){
+	public Group(String title, String creator){
 		this.title = title;
-		this.description = description;
-		this.place = place;
-		this.date = date;
 		this.creator = creator;
 		this.listUsers = new ArrayList<String>();
 		this.listUsers.add(creator);
@@ -31,15 +28,6 @@ public class Event{
 	public void setTitle(String name){
 		this.title = name;
 	}
-	public void setDescription(String name){
-		this.description = name;
-	}
-	public void setDate(String name){
-		this.date = name;
-	}
-	public void setPlace(String name){
-		this.place = name;
-	}
 	public void setCreator(String name){
 		this.creator = name;
 	}
@@ -47,15 +35,6 @@ public class Event{
 	//GET ---------------------------------------------------------------
 	public String getTitle(){
 		return this.title;
-	}
-	public String getDescription(){
-		return this.description;
-	}
-	public String getDate(){
-		return this.date;
-	}
-	public String getPlace(){
-		return this.place;
 	}
 	public String getCreator(){
 		return this.creator;

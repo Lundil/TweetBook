@@ -32,7 +32,7 @@
     <!-- Parametrages propres a cette application web -->
    <context-param>
       <param-name>concepteur</param-name>
-      <param-value>Philippe MATHIEU, LP DA2I</param-value>
+      <param-value>Catrice Aurelia</param-value>
       <description>
         Constantes de l'appli
 	accessibles par getServletContext().getInitParameter("name");
@@ -81,7 +81,7 @@
     <login-config>
       <auth-method>FORM</auth-method>
       <form-login-config>
-        <form-login-page>signup.jsp</form-login-page>
+        <form-login-page>signup.html</form-login-page>
       </form-login-config>
     </login-config>
     
